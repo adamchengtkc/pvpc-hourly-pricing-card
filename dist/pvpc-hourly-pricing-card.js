@@ -221,7 +221,7 @@ class PVPCHourlyPricingCard extends LitElement {
   }
 
   static getConfigElement() {
-    return document.createElement('pvpc-hourly-pricing-card-editor');
+    return document.createElement('nordpool-card-editor');
   }
 
   static getStubConfig(hass, entities, entitiesFallback) {
@@ -756,7 +756,7 @@ class PVPCHourlyPricingCard extends LitElement {
   }
 }
 
-customElements.define('pvpc-hourly-pricing-card', PVPCHourlyPricingCard);
+customElements.define('nordpool-card', PVPCHourlyPricingCard);
 
 export class PVPCHourlyPricingCardEditor extends LitElement {
   setConfig(config) {
@@ -907,12 +907,12 @@ export class PVPCHourlyPricingCardEditor extends LitElement {
   }
 }
 
-customElements.define('pvpc-hourly-pricing-card-editor', PVPCHourlyPricingCardEditor);
+customElements.define('nordpool-card-editor', PVPCHourlyPricingCardEditor);
 
 window.customCards = window.customCards || [];
 window.customCards.push({
-  type: 'pvpc-hourly-pricing-card',
-  name: 'PVPC Hourly Pricing',
+  type: 'nordpool-card',
+  name: 'Nordpool Hourly Pricing',
   preview: true,
   description: 'The PVPC Hourly Pricing card allows you to display propertly the PVPC Hourly Pricing entity.'
 });
