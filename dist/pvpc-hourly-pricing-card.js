@@ -109,6 +109,21 @@ const locale = {
     optionShowGraph: 'Show Graph',
     optionShowInfo: 'Informatie weergeven'
   },
+  no: {
+    minPrice: 'Minimumspris i dag:',
+    maxPrice: 'Maks pris i dag:',
+    minPriceNextDay: 'Minimumspris i morgen:',
+    maxPriceNextDay: 'Maks pris i morgen:',
+    infoNoNextDay: 'Morgendagens data er endå ikke tilgjengelig',
+    from: 'fra',
+    to: 'til',
+    optionName: 'Navn (valgfritt)',
+    optionEntity: 'Enhet (påkrevd)',
+    optionShowCurrent: 'Vis nåværende status',
+    optionShowDetails: 'Vis detaljer',
+    optionShowGraph: 'Vis graf',
+    optionShowInfo: 'Vis informasjion'
+  },
   pt: {
     minPrice: 'Preço mínimo hoje:',
     maxPrice: 'Preço máximo hoje:',
@@ -578,15 +593,18 @@ class PVPCHourlyPricingCard extends LitElement {
   getDespiction(attributes) {
     const today = new Date();
 
-    const priceRegex = /price_\d\dh/;
-    const priceNextDayRegex = /price_(next|last)_day_\d\dh/;
+    // const priceRegex = /price_\d\dh/;
+    // const priceNextDayRegex = /price_(next|last)_day_\d\dh/;
 
-    const priceArray = Object.keys(attributes)
-      .filter((key) => priceRegex.test(key))
-      .map((key) => attributes[key]);
-    const priceNextDayArray = Object.keys(attributes)
-      .filter((key) => priceNextDayRegex.test(key))
-      .map((key) => attributes[key]);
+    // const priceArray = Object.keys(attributes)
+    //   .filter((key) => priceRegex.test(key))
+    //   .map((key) => attributes[key]);
+    // const priceNextDayArray = Object.keys(attributes)
+    //   .filter((key) => priceNextDayRegex.test(key))
+    //   .map((key) => attributes[key]);
+
+    const priceArray = attributes.today;
+    const priceNextDayArray = attributes.tomorrow;
 
     let data = [];
     let dateTime = [];

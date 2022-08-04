@@ -1,4 +1,11 @@
+# Lovelace card to show Nordpool pricing
+
+Modified from [PVPC Hourly Pricing Card](https://github.com/danimart1991/pvpc-hourly-pricing-card)
+
+Required a Nordpool entity from https://github.com/custom-components/nordpool/
+
 # PVPC Hourly Pricing Card
+
 
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/danimart1991/pvpc-hourly-pricing-card)
 ![GitHub last commit](https://img.shields.io/github/last-commit/danimart1991/pvpc-hourly-pricing-card)
