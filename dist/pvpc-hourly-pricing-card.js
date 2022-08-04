@@ -543,7 +543,7 @@ class PVPCHourlyPricingCard extends LitElement {
                 const label =
                   labelTitle +
                   ': ' +
-                  parseFloat(tooltipItem.raw).toFixed(5) +
+                  parseFloat(tooltipItem.raw) +
                   ' ' +
                   that.pvpcHourlyPricingObj.attributes.unit_of_measurement +
                   ' ';
@@ -650,7 +650,7 @@ class PVPCHourlyPricingCard extends LitElement {
   }
 
   getFixedFloat(number) {
-    return parseFloat(number).toFixed(5);
+    return parseFloat(number);
   }
 
   _handleClick() {
