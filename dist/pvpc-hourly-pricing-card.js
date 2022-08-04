@@ -799,7 +799,7 @@ export class PVPCHourlyPricingCardEditor extends LitElement {
     this.lang = this.hass.selectedLanguage || this.hass.language;
 
     const entities = Object.keys(this.hass.states).filter((eid) =>
-      Object.keys(this.hass.states[eid].attributes).some((aid) => aid == 'attribution')
+      Object.keys(this.hass.states[eid].attributes).some((aid) => aid.includes('price'))
     );
 
     return html`
