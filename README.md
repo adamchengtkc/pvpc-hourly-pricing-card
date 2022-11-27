@@ -32,15 +32,6 @@ Based on [Lovelace Weather Card with Chart](https://github.com/sgttrs/lovelace-w
 - Lowest and Highest of the current and next day.
 - Icon indicating the current pricing period.
 
-## Installation
-
-You could use [HACS](https://hacs.xyz/) or follow this [guide](https://www.danielmartingonzalez.com/en/installing-lovelace-plugins).
-
-```yaml
-resources:
-  url: /local/pvpc-hourly-pricing-card.js?v=1.6.0
-  type: module
-```
 
 ## Options
 
